@@ -18,6 +18,9 @@ function App() {
 
   return (
     <>
+      <header className="app-header">
+        <h1 className="app-title">Study Station</h1>
+      </header>
       <main className="main-content">
         <PageComponent />
       </main>

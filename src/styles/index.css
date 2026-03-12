@@ -28,6 +28,17 @@ body {
 #root {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: none;
+}
+
+.app-title {
+  font-size: 20px;
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .sidebar {
@@ -382,9 +393,35 @@ textarea.input {
   display: none;
 }
 
+@media (min-width: 769px) {
+  .app-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .main-content {
+    padding-top: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .sidebar {
     display: none;
+  }
+
+  .app-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
   }
 
   .mobile-menu {
